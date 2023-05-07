@@ -57,7 +57,7 @@ The setting changes we will make for this device are:
 
 ### Custom NPC Device
 
-Finally, we need to write the code for our Custom NPC Device we created earlier. Here is the code in it's entirety. It's heavliy commented to explain exactly what is happening at each step of the process.
+Finally, we need to write the code for our Custom NPC Device we created earlier. Here is the code in it's entirety. It's heavily commented to explain exactly what is happening at each step of the process.
 
 ```ruby
 ### custom_npc_dialog_device.verse
@@ -160,8 +160,8 @@ custom_npc_dialog_device := class(creative_device):
         # Finally, we will listen for the event when the player clicks the "Next" button in the dialog popup.
         NextDialogTrigger.TriggeredEvent.Subscribe(OnNextButtonClicked)
 
-    # Deterimine what to do when the player interacts with the NPC.
-    # The signature of this method (what arguments it takes in, between the paratheses) is (Agent : agent).
+    # Determine what to do when the player interacts with the NPC.
+    # The signature of this method (what arguments it takes in, between the parentheses) is (Agent : agent).
     # An `agent` is a data type that is used to get an in-game player who interacted with this NPC.
     #
     # Insight: These event method names can be anything that you want. A very common practice, however, is to start the
@@ -200,7 +200,7 @@ custom_npc_dialog_device := class(creative_device):
         if (Player := player[Agent?]):
             # We need to determine which message to show to the player.
             if:
-                # This will get the message at the current `MessageIndex` (the nth message in the lsit).
+                # This will get the message at the current `MessageIndex` (the nth message in the list).
                 Message := NPCDialogMessages[MessageIndex]
 
                 # After get the message, we will increase the `MessageIndex` by 1. We do this so that the next time
@@ -225,7 +225,7 @@ custom_npc_dialog_device := class(creative_device):
                 PopupDialog.Hide(Player)
 ```
 
-Once you have the code saved and re-compiled in the UEFN edtior, some new options show up in your device's `Details` panel.
+Once you have the code saved and re-compiled in the UEFN editor, some new options show up in your device's `Details` panel.
 
 ![Custom Device Details](images/custom_device_details.png)
 

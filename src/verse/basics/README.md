@@ -4,7 +4,7 @@
 
 The information contained here is best learned by typing it in (not copying!) while you read. Create a new verse script in UEFN and follow along!
 
-> Use this information in additon to the {{ external_link('Official Verse documentation', book.external.links.uefn_verse.learn) }} along with the {{ external_link('Verse Language Reference', book.external.links.uefn_verse.language_reference) }}.
+> Use this information in addition to the {{ external_link('Official Verse documentation', book.external.links.uefn_verse.learn) }} along with the {{ external_link('Verse Language Reference', book.external.links.uefn_verse.language_reference) }}.
 
 {% include [book.partials.path, '/download-vs-code.md'] | join %}
 
@@ -29,7 +29,7 @@ SomeCodeHere() # They can even be put on the same line after code!
 # SomeCodeHere()
 ```
 
-I can hear you thinking to yourself, "But I wrote this code, of course I know what it does and how it works!". That may be true a day or even a week from now, but what about 6 months or a year from now? Putting in a helpful comment can save you, and your teammates, hours or even days of headaches! A great example of good commenting pratice is in our [Custom NPC Dialog Example]({{ book.examples.path }}/custom-npc-dialog/README.md).
+I can hear you thinking to yourself, "But I wrote this code, of course I know what it does and how it works!". That may be true a day or even a week from now, but what about 6 months or a year from now? Putting in a helpful comment can save you, and your teammates, hours or even days of headaches! A great example of good commenting practice is in our [Custom NPC Dialog Example]({{ book.examples.path }}/custom-npc-dialog/README.md).
 
 ## Numbers
 
@@ -70,7 +70,7 @@ MyName : string = "I have {CoinCount} coins!" # Produces the string "I have 10 c
 
 ## Variables
 
-Variables are an essential part of programming. A variable allows the programmer to store data of certain types to use, or change, later in the program. Variables in Verse are immutable by default. The naming convention for variables differ from language to language, but in Verse, they start with an upppercase letter using the camel case naming convention.
+Variables are an essential part of programming. A variable allows the programmer to store data of certain types to use, or change, later in the program. Variables in Verse are immutable by default. The naming convention for variables differ from language to language, but in Verse, they start with an uppercase letter using the camel case naming convention.
 
 ```ruby
 NumberOfItems : int = 15
@@ -225,9 +225,9 @@ else:
 
 > If we are on fire, we scream in panic! If we are **not** on fire **and** we are hungry, we eat some lunch. Otherwise, we play some Fortnite! 😀
 
- ### Logical Modifiers
+### Logical Modifiers
 
- Logical modifiers allow us to combine conditions into a single `if` statement. These are able to be mixed and matched to produce some interesting effects.
+Logical modifiers allow us to combine conditions into a single `if` statement. These are able to be mixed and matched to produce some interesting effects.
 
 ```ruby
 IsOnFire : logic = false
@@ -242,7 +242,7 @@ else:
 
 > If we are on fire **and** we are hungry, first scream in panic then eat some lunch.
 
-`and` is another keyword which means that both conditions have to be true. If they aren't both true at the same time, then we don't perfom the code in that branch. We also have another keyword: `or`.
+`and` is another keyword which means that both conditions have to be true. If they aren't both true at the same time, then we don't perform the code in that branch. We also have another keyword: `or`.
 
 ```ruby
 IsOnFire : logic = false
@@ -259,7 +259,7 @@ else:
 
 `or` is used to to check if either condition is true. If at least one of them is true, then perform the code in that branch. Otherwise, move on.
 
-The final keyword we can use to modify an `if` statement is `not`. `not` means, "check if the conditon is the opposite of it's value" (😵), meaning `not true` is `false` and `not false` is `true`.
+The final keyword we can use to modify an `if` statement is `not`. `not` means, "check if the condition is the opposite of it's value" (😵), meaning `not true` is `false` and `not false` is `true`.
 
 ```ruby
 IsOnFire : logic = false
@@ -296,7 +296,7 @@ We can notice that the `equality` operator is the same as assigning a value to a
 
 ### Logic Context
 
-Vere supplies us with an idea called a `context`. A `context` is a specific place in our code where special, extraordinary things can happen. It sounds strange at first, and to be honest, it kind of is, but `context`s are super powerful. The `if` statement provides us with a fallible `context`. This means the conditions we check for in an `if` statement can fail!
+Verse supplies us with an idea called a `context`. A `context` is a specific place in our code where special, extraordinary things can happen. It sounds strange at first, and to be honest, it kind of is, but `context`s are super powerful. The `if` statement provides us with a fallible `context`. This means the conditions we check for in an `if` statement can fail!
 
 ```ruby
 IsOnFire : logic = false
@@ -387,13 +387,13 @@ else:
 
 ## Arrays
 
-When we create a variable like `MyGrade : string = "A+"`, we can only assign a singluar value to the variable. Arrays help us hold many different values for a single data type.
+When we create a variable like `MyGrade : string = "A+"`, we can only assign a singular value to the variable. Arrays help us hold many different values for a single data type.
 
 ```ruby
 Numbers : []int = array{} # This creates an empty array
 ```
 
-The syntax of an array is a bit different from a regular variable. When we define the data type of the array, we put open and closing square brackets `[]` before the data type, `int`. This tells UEFN that we want to use an array data type. The varaible's value, the information after the equal sign (`=`), is a new array `object`. Objects are also super important in programming and will be covered later.
+The syntax of an array is a bit different from a regular variable. When we define the data type of the array, we put open and closing square brackets `[]` before the data type, `int`. This tells UEFN that we want to use an array data type. The variable's value, the information after the equal sign (`=`), is a new array `object`. Objects are also super important in programming and will be covered later.
 
 > An object is defined by it's name followed by open and closing curly braces i.e. array{}
 
@@ -437,7 +437,7 @@ Numbers : []int = array{ 1, 2, 3, 4, 5 }
 if (set Numbers[1] = 10) {}
 ```
 
-Even though we aren't doing anything in the block of the `if` statement, this operation can fail if the progam tries to index the array outside the defined bounds.
+Even though we aren't doing anything in the block of the `if` statement, this operation can fail if the program tries to index the array outside the defined bounds.
 
 As a learning experience, try to index an array outside of its bounds or update an array with an index that is greater than its bounds. What happens?
 
@@ -477,6 +477,7 @@ Do you know what the output to this `for` loop would be? An important part of pr
         <code>I have 1 lives left!</code><br/>
         <code>I'm dead!</code><br/>
     </div>
+
 </details>
 
 ## Maps
@@ -521,7 +522,6 @@ if (set Resources["Coins"] = 10), CoinsAmount := Resources["Coins"]:
 
 No only can we update a `map`'s value by its key, but we can immediately retreive that new value in a new varaible and then get the contents of that varaible, assuming that those two operations didn't fail.
 
-
 ### Removing Items
 
 Unlike arrays, it's possible to remove items from a `map`, it's an operation that can fail. This will give you the chance to see a full method definition before we break methods down in detail.
@@ -547,10 +547,10 @@ RemoveItemFromMap(Resources : [string]int, KeyToRemove : string) : [string]int =
 
 Methods are a way in programming to encapsulate different behavior or perform different steps in a specific order. Let's take the method example from above and break it down:
 
-* `RemoveItemFromMap` -> The name of the method we can use to call (activate) the method at another part of our program.
-* `(Resources : [string]int, KeyToRemove : string)` -> The signature of the method which dictates which types of variables this method takes, if any, but also how many and what they are called when used in the `method body`.
-* `: [string]int` -> This is called the `return type` of the method. Like variables, methods also *can* give back specific types of data to work with later.
-* `=` -> The equal sign (`=`) starts what's called the `method body` where the instructions of the method are defined.
+- `RemoveItemFromMap` -> The name of the method we can use to call (activate) the method at another part of our program.
+- `(Resources : [string]int, KeyToRemove : string)` -> The signature of the method which dictates which types of variables this method takes, if any, but also how many and what they are called when used in the `method body`.
+- `: [string]int` -> This is called the `return type` of the method. Like variables, methods also _can_ give back specific types of data to work with later.
+- `=` -> The equal sign (`=`) starts what's called the `method body` where the instructions of the method are defined.
 
 ### Into the Void
 
@@ -567,9 +567,9 @@ SetupPlayerInventory() : void =
 
 In this example, we can see that when we call `SetupPlayer()` somewhere in our code, we will do 3 things in order:
 
-* `GiveResources()`
-* `GiveWeapons()`
-* `GiveBullets()`
+- `GiveResources()`
+- `GiveWeapons()`
+- `GiveBullets()`
 
 > Methods are best named as what actions they perform i.e. `GiveWeapons()`. This makes it clear what the method is doing so you don't have to revisit the method definition to figure out what it's supposed to be doing in the first place.
 
@@ -683,7 +683,7 @@ game_state := struct:
     GameState.GameStartDelay
 ```
 
-We define the method *outside* the struct's definition as they cannot define methods within their definitions. The syntax to define a method on a struct is `(StructNameToUseInDefinition : name_of_struct).NameOfMethod(CanTakeArgumentsOrNot : type) : return_type =`
+We define the method _outside_ the struct's definition as they cannot define methods within their definitions. The syntax to define a method on a struct is `(StructNameToUseInDefinition : name_of_struct).NameOfMethod(CanTakeArgumentsOrNot : type) : return_type =`
 
 In the above example, we call the struct by the name of `GameState` which is used to return the `GameStartDelay` value of the struct. We have to define a new name for the struct followed by the struct's type to be able to interact with any of the struct's data members.
 
@@ -704,8 +704,8 @@ player_data := class:
 
 Like a struct, the syntax to make a new class is `name_of_class := class:`. Two other major differences with classes vs structs:
 
-* Variables can be mutable within the class' definition.
-* Methods can be defined directly within the class.
+- Variables can be mutable within the class' definition.
+- Methods can be defined directly within the class.
 
 To use a class (or struct), we need to make an instance of it. An instance is the concrete value of a class whereas the definitions we've seen so far are like the blueprints for an instance.
 
@@ -763,18 +763,18 @@ my_device := class(creative_device):
     # ...definition of class...
 ```
 
-Inheritance is a way to tell the program, "Okay, I'm not exatly this other class but I want to act like one". This means that you get **all** of the functionality, methods, data members, etc., of another class to use in your own! This makes making or extending (adding new functionality to) complex objects much easier if most of what they do resides in another class' definition.
+Inheritance is a way to tell the program, "Okay, I'm not exactly this other class but I want to act like one". This means that you get **all** of the functionality, methods, data members, etc., of another class to use in your own! This makes making or extending (adding new functionality to) complex objects much easier if most of what they do resides in another class' definition.
 
 The syntax breakdown of inheriting from another class is `my_class := class(class_to_inherit):`.
 
 If you inherit from another class, you may think to yourself, "But what can the other class do that I can use?". Hopefully you'll understand why you need to inherit from a specific class, but if not, you can easily find out what each class does with some explanations for each method / data member, if any. There are two primary ways to find this information:
 
 1. Use the {{ external_link('UEFN API Reference', book.external.links.uefn_verse.api_reference) }} website.
-    * This website has pretty good explanations of each class. (Sometimes lacking a little bit 🙏)
+   - This website has pretty good explanations of each class. (Sometimes lacking a little bit 🙏)
 2. Every UEFN project comes with the code definitions for everything you can use inside UEFN. These files all end in `.digest.verse`.
-    * `Fortnite.digest.verse` -> This defines all of the Fortnite specific items like UI buttons, Devices, etc.
-    * `Verse.digest.verse` -> This defines specifics of the Verse language.
-    * `UnrealEngine.digest.verse` -> This defines things like building UI in code for a players, mathematical functions, etc.
+   - `Fortnite.digest.verse` -> This defines all of the Fortnite specific items like UI buttons, Devices, etc.
+   - `Verse.digest.verse` -> This defines specifics of the Verse language.
+   - `UnrealEngine.digest.verse` -> This defines things like building UI in code for a players, mathematical functions, etc.
 
 It is **very** much worth your time to read through these files. Not only will you learn more about what's available to use, but you will see many more of the advanced language syntax available to all Verse programs.
 
